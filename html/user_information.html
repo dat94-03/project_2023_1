@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body onscroll="detectScroll()">
   <header class="header">
     <div class="header-container">
       <div class="header-logo">
@@ -37,19 +37,19 @@
     <div class="content">
       <div class="myAccount-nav">
         <ul>
-          <li class="link active-nav">
+          <li class="link-user-information active-nav">
             <span class="material-symbols-outlined">
               grid_view
               </span>
             <a>Chi Tiết Tài Khoản</a>
           </li>
-          <li class="link">
+          <li class="link-order-details">
             <span class="material-symbols-outlined">
               shopping_bag
               </span>
             <a>Đơn hàng</a>
           </li>
-          <li class="link">
+          <li class="link-exit">
             <span class="material-symbols-outlined">
               logout
               </span>
@@ -150,5 +150,7 @@
       </div>
   </div>
 </footer>
+
+<script src="../js/user_information.js"></script>
 </body>
 </html>
