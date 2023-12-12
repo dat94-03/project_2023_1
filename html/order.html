@@ -9,7 +9,10 @@
   <link rel="icon" href="../img/icons8-american-67.png" type="x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
 </head>
+
 <body>
   <div class="div-body ">
   <div class="popup popup-disappear">
@@ -69,68 +72,140 @@
         <div class="location-inf">
           <label>Chọn chi nhánh *</label>
           <div class="elementor-field elementor-select-wrapper ">
-            <select name="form_fields[name]" id="form-field-name" class="location-select" required="required" aria-required="true">
-              <option value=""></option><option value="1 Ngõ 72 Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội">1 Ngõ 72 Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội</option><option value="47 Thái Hà, Trung Liệt, Đống Đa, Hà Nội">47 Thái Hà, Trung Liệt, Đống Đa, Hà Nội</option><option value="352 Giải Phóng,Phương Liệt, Thanh Xuân,Hà Nội">352 Giải Phóng,Phương Liệt, Thanh Xuân,Hà Nội</option><option value="86 Ngõ Giếng, Hoàng Cầu, Hà Nội">86 Ngõ Giếng, Hoàng Cầu, Hà Nội</option><option value="269 Kim Ngưu, Hai Bà Trưng, Hà Nội">269 Kim Ngưu, Hai Bà Trưng, Hà Nội</option><option value="139 Lò Đúc, Hai Bà Trưng,Hà Nội">139 Lò Đúc, Hai Bà Trưng,Hà Nội</option><option value="16 Trần Văn Cao, Phường Đakao, Quận 1, Thành phố Hồ Chí Minh">16 Trần Văn Cao, Phường Đakao, Quận 1, Thành phố Hồ Chí Minh</option><option value="2864 Phạm Thế Hiển, Phường 7, Quận 8, Thành phố Hồ Chí Minh">2864 Phạm Thế Hiển, Phường 7, Quận 8, Thành phố Hồ Chí Minh</option><option value="50 Đường 297, Phước Long B, Quận 9, Thành phố Hồ Chí Minh">50 Đường 297, Phước Long B, Quận 9, Thành phố Hồ Chí Minh</option><option value="175b Cao Thắng, Phường 12, Quận 10, Thành phố Hồ Chí Minh">175b Cao Thắng, Phường 12, Quận 10, Thành phố Hồ Chí Minh</option><option value="7WM5+P8H, Trường Yên, Hoa Lư, Ninh Bình">7WM5+P8H, Trường Yên, Hoa Lư, Ninh Bình</option>
-              <option value="Cù Chính Lan, Nhật Tân, Ninh Bình">Cù Chính Lan, Nhật Tân, Ninh Bình</option>
-              <option value="23 Bàu Sen, Hòa Hiếu, TX. Thái Hòa, Nghệ An">23 Bàu Sen, Hòa Hiếu, TX. Thái Hòa, Nghệ An</option>
-              <option value="433 Phủ Qùy, Hòa Hiếu, TX. Thái Hòa, Nghệ An">433 Phủ Qùy, Hòa Hiếu, TX. Thái Hòa, Nghệ An</option>
-              <option value="139 Đường 1/5 - TT, Nghĩa Đàn, Nghệ An">139 Đường 1/5 - TT, Nghĩa Đàn, Nghệ An</option>
-              <option value="E-07, KPTM Vinpearl Hòn Tre, Phường Vĩnh Nguyên, Tp. Nha Trang, Tỉnh Khánh Hoà">E-07, KPTM Vinpearl Hòn Tre, Phường Vĩnh Nguyên, Tp. Nha Trang, Tỉnh Khánh Hoà</option>
+            <select name="form_fields[name]" id="myselect" class="location-select" required="required" aria-required="true">
+              <option value=""></option><option value="1 Ngõ 72 Trần Đại Nghĩa">1 Ngõ 72 Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội</option><option value="47 Thái Hà, Trung Liệt">47 Thái Hà, Trung Liệt, Đống Đa, Hà Nội</option><option value="352 Giải Phóng,Phương Liệt">352 Giải Phóng,Phương Liệt, Thanh Xuân,Hà Nội</option><option value="86 Ngõ Giếng, Hoàng Cầu">86 Ngõ Giếng, Hoàng Cầu, Hà Nội</option><option value="264 Kim Ngưu, Hai Bà Trưng">264 Kim Ngưu, Hai Bà Trưng, Hà Nội</option><option value="139 Lò Đúc, Hai Bà Trưng">139 Lò Đúc, Hai Bà Trưng,Hà Nội</option><option value="Số 1 Đại Cồ Việt">Số 1 Đại Cồ Việt</option><option value="72 Lý Tự Trọng, Quận 1">72 Lý Tự Trọng, Quận 1, Thành phố Hồ Chí Minh</option><option value="2864 Phạm Thế Hiển, Quận 8">2864 Phạm Thế Hiển, Phường 7, Quận 8, Thành phố Hồ Chí Minh</option><option value="175b Cao Thắng, Quận 10">175b Cao Thắng, Phường 12, Quận 10, Thành phố Hồ Chí Minh</option><option value="7WM5+P8H, Trường Yên, Hoa Lư">7WM5+P8H, Trường Yên, Hoa Lư, Ninh Bình</option>
+              <option value="Cù Chính Lan, Nhật Tân">Cù Chính Lan, Nhật Tân, Ninh Bình</option>
+              <option value="23 Bàu Sen, Hòa Hiếu, TX. Thái Hòa">23 Bàu Sen, Hòa Hiếu, TX. Thái Hòa, Nghệ An</option>
+              <option value="433 Phủ Qùy, Hòa Hiếu, TX. Thái Hòa">433 Phủ Qùy, Hòa Hiếu, TX. Thái Hòa, Nghệ An</option>
+              <option value="139 Đường 1/5 - TT, Nghĩa Đàn">139 Đường 1/5 - TT, Nghĩa Đàn, Nghệ An</option>
+              <option value="E-07, KPTM Vinpearl Hòn Tre, Phường Vĩnh Nguyên">E-07, KPTM Vinpearl Hòn Tre, Phường Vĩnh Nguyên, Tp. Nha Trang, Tỉnh Khánh Hoà</option>
             </select>
-              <div class="arrow-icon">
-                <span class="material-symbols-outlined">
-                  arrow_drop_down
-                  </span>
-              </div>
           </div>
          </div>
          <div class="div-extend-location"></div>
         </div>
-        
+        <label class="room-label">Chọn Loại Phòng *</label>
         <div>
-        <div class="date-inf">
-          <label style="padding-top:15px ;">Ngày *</label>
-          <div class="date-div">
-          <input type="text"  id="myDate" class="date-input" placeholder="DD/MM/YYYY" required="required" aria-required="true" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" readonly="readonly">
-          <div class="date-icon-div">
-          <span class="material-symbols-outlined">
-            calendar_month
-            </span>   
-           </div>
+        <div class="container-card">
+          
+          <div class="card">
+            <img src="https://sanxuatbia.com/wp-content/uploads/2019/11/b5.jpg" alt="">
+            <div class="check">
+              <i class="fa-regular fa-circle"></i>
+              <i class="fa-solid fa-circle-check hidden"></i>
+             </div>
+            <div class="intro">
+               <h2>Phòng Chơi Cơ Bản</h2>
+               <p>Phòng Chơi<span> Cơ Bản</span> là phòng dành cho những người muốn chơi bida một cách thoải mái và không quá chuyên nghiệp. </p>
+            </div>
           </div>
-        </div>  
-        <div class="div-extend-date"></div>
+      
+          <div class="card">
+          
+            <img src="https://sanxuatbia.com/wp-content/uploads/2019/11/b5.jpg" alt="">
+            <div class="check">
+              <i class="fa-regular fa-circle"></i>
+              <i class="fa-solid fa-circle-check hidden"></i>
+             </div>
+            <div class="intro">
+               <h2>Phòng Chơi Chuyên Nghiệp</h2>
+               <p>Phòng Chơi<span> Chuyên Nghiệp</span> là phòng dành cho những người chơi bida chuyên nghiệp hoặc muốn thách thức cao hơn.</p>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="https://sanxuatbia.com/wp-content/uploads/2019/11/b5.jpg" alt="">
+            <div class="check">
+              <i class="fa-regular fa-circle"></i>
+              <i class="fa-solid fa-circle-check hidden"></i>
+             </div>
+            <div class="intro">
+               <h2>Phòng Chơi Đặc Biệt</h2>
+               <p>Phòng Chơi<span> Đặc Biệt</span> là phòng dành cho khách hành muốn trải nghiệm không gian sang trọng hoặc không gian riêng tư.</p>
+            </div>
+          </div>
         </div>
-
-        <div>
-        <div class="time-inf">
-          <label style="padding-top: 15px;">Thời gian *</label>
-          <div class="time-div">
-            <input type="text" name="form_fields[field_2]" id="myTime" class="time-input" placeholder="HH:MM" required="required" aria-required="true">
-          <div class="time-icon-div">
-            <span class="material-symbols-outlined">
-              schedule
-              </span>
-           </div>
-          </div>
-        </div> 
-        <div class="div-extend-time"></div>
-        </div>
-
-
-   <div class="quantity-inf"> 
-       <label>Số lượng khách hàng dự kiến *</label>
-       <div class="elementor-field elementor-select-wrapper ">
-        <select name="form_fields[field_3]" id="form-field-field_3" class="quantity-select" required="required" aria-required="true">
-          <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11-15">11-15</option><option value="16-20">16-20</option><option value="20+">20+</option>		
-        	</select>
-          <div class="arrow-icon">
-            <span class="material-symbols-outlined">
-              arrow_drop_down
-              </span>
-          </div>
+        <div class="div-room"></div>
       </div>
-   </div>
+
+    <label class="time-label">Thời gian *</label>
+  
+    <div class="wrap-time">
+  
+      <ul class="tabs group">
+        <li><a class="active-time day1" href="#/one"></a></li>
+        <li><a href="#/two" class="day2"></a></li>
+        <li><a href="#/three" class="day3"></a></li>
+      </ul>
+      
+      <div id="content">
+        <div id="one">
+           <button id="9" class="buttonDay1">8h-9h</button>
+           <button id="10" class="buttonDay1">9h-10h</button>
+           <button id="11" class="buttonDay1">10h-11h</button>
+           <button id="12" class="buttonDay1">11h-12h</button>
+           <button id="13" class="buttonDay1">12h-13h</button>
+  
+           <button id="14" class="buttonDay1">13h-14h</button>
+           <button id="15" class="buttonDay1">14h-15h</button>
+           <button id="16" class="buttonDay1">15h-16h</button>
+           <button id="17" class="buttonDay1">16h-17h</button>
+           <button id="18" class="buttonDay1">17h-18h</button>
+  
+           <button id="19" class="buttonDay1">18h-19h</button>
+           <button id="20" class="buttonDay1">19h-20h</button>
+           <button id="21" class="buttonDay1">20h-21h</button>
+           <button id="22" class="buttonDay1">21h-22h</button>
+           <button id="23" class="buttonDay1">22h-23h</button>
+  
+        </div>
+      
+  
+        <div id="two" class="hidden-time">
+          <button>8h-9h</button>
+           <button>9h-10h</button>
+           <button>10h-11h</button>
+           <button>11h-12h</button>
+           <button>12h-13h</button>
+  
+           <button>13h-14h</button>
+           <button>14h-15h</button>
+           <button>15h-16h</button>
+           <button>16h-17h</button>
+           <button>17h-18h</button>
+  
+           <button>18h-19h</button>
+           <button>19h-20h</button>
+           <button>20h-21h</button>
+           <button>21h-22h</button>
+           <button>22h-23h</button>
+       </div>
+  
+       <div id="three" class="hidden-time">
+        <button>8h-9h</button>
+        <button>9h-10h</button>
+        <button>10h-11h</button>
+        <button>11h-12h</button>
+        <button>12h-13h</button>
+  
+        <button>13h-14h</button>
+        <button>14h-15h</button>
+        <button>15h-16h</button>
+        <button>16h-17h</button>
+        <button>17h-18h</button>
+  
+        <button>18h-19h</button>
+        <button>19h-20h</button>
+        <button>20h-21h</button>
+        <button>21h-22h</button>
+        <button>22h-23h</button>
+     </div>
+      </div>
+      
+    </div> 
+   <div class="div-time"></div>
+ 
+
    
   </div>
   
@@ -145,8 +220,6 @@
       </div>
     
   </section>
-
-
 
   <section class="section2">
     <div class="col" style="width: 380px;">
@@ -189,24 +262,65 @@
 
 </div>
 
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="../js/script.js"></script>
+  <script type="module" src="../js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-    flatpickr("#myDate", {
-    enableTime: false,
-    dateFormat: "d-m-Y",
-    
-    });
+     (function($) {
+  
+  var tabs =  $(".tabs li a");
+  let hour_day2 = document.querySelector('#two') ;
+  let hour_day3 = document.querySelector('#three') ; 
+  tabs.click(function() {
+    hour_day2.classList.remove('hidden-time') ;
+    hour_day3.classList.remove('hidden-time') ; 
+    var content = this.hash.replace('/','');
+    tabs.removeClass("active-time");
+    $(this).addClass("active-time");
+    $("#content").find('div').hide();
+    $(content).fadeIn(200);
+  });
 
-    flatpickr("#myTime", {
-      enableTime: true,
-    noCalendar: true,
-    dateFormat: "H:i",
-    });
+})(jQuery);
+
+let contentButton = document.querySelector('#content') ;
+let timeButtons = contentButton.querySelectorAll('button') ; 
+
+timeButtons.forEach(button => {
+  button.addEventListener('click',() => {
+    button.classList.toggle('active_button') ; 
+  })
+})
+
+var currentTime = new Date() ;
+var currentMonth = currentTime.getMonth() + 1;
+var currentDay = currentTime.getDate();
+var currentHour = currentTime.getHours() ;
+
+var tomorrow = new Date();
+tomorrow.setDate(currentTime.getDate() + 1) ;
+var tomorrowMonth = tomorrow.getMonth() + 1;
+var tomorrowDay = tomorrow.getDate();
+
+var dayAfterTomorrow = new Date() ; 
+dayAfterTomorrow.setDate(currentTime.getDate() + 2) ;
+var dayAfterTomorrowMonth = dayAfterTomorrow.getMonth() + 1;
+var dayAfterTomorrowDay = dayAfterTomorrow.getDate();
+
+let day1 = document.querySelector('.day1') ;
+let day2 = document.querySelector('.day2') ;
+let day3 = document.querySelector('.day3') ;
+
+day1.innerHTML=`${currentDay}/${currentMonth}` ;
+day2.innerHTML=`${tomorrowDay}/${tomorrowMonth}` ;
+day3.innerHTML=`${dayAfterTomorrowDay}/${dayAfterTomorrowMonth}` ;  
+
+
+let buttonDay1s = document.querySelectorAll('.buttonDay1') ; 
+buttonDay1s.forEach(function(button) {
+  let buttonId = Number(button.id) ;
+  if(currentHour >= buttonId) 
+  button.setAttribute('disabled', 'true');
+}) 
   </script>
 </body>
 </html>

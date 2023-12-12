@@ -1,35 +1,31 @@
+
 let div_extend_name = document.querySelector('.div-extend-name') ;
 let div_extend_phone = document.querySelector('.div-extend-phone') ;
 let div_extend_location = document.querySelector('.div-extend-location') ;
-let div_extend_date = document.querySelector('.div-extend-date') ;
-let div_extend_time = document.querySelector('.div-extend-time') ;
 let div_extend_check = document.querySelector('.div-extend-check') ;
 let name_input = document.querySelector('.name-input') ;
 let phone_input = document.querySelector('.phone-input') ;
 let locations = document.querySelector('.location-select') ;
-let time_input = document.querySelector('#myTime') ;
-let date_input = document.querySelector('#myDate') ;
 let check = document.querySelector('.checkBtn') ;
 let popup = document.querySelector('.popup') ;
 let popup_button = document.querySelector('.popup-button') ;
+let div_extend_room = document.querySelector('.div-room') ; 
+let div_extend_time = document.querySelector('.div-time') ; 
 let html1 = `<div class="error">
-<span class="material-symbols-outlined">
-  close
-  </span>
   <p>Ô này bắt buộc nhập</p>
 </div>`  ; 
 let html2 = `<div class="error">
-<span class="material-symbols-outlined">
-  close
-  </span>
   <p>Sai định dạng số điện thoại, vui lòng nhập lại</p>
 </div>` ;
 let html3 = `<div class="error">
-<span class="material-symbols-outlined">
-  close
-  </span>
   <p>Đã xảy ra lỗi,vui lòng thử lại</p>
 </div>` ; 
+let html_room = `<div class="error">
+<p> Vui lòng chọn loại phòng</p>
+ </div>` ; 
+ let html_time =  `<div class="error">
+ <p> Vui lòng chọn giờ chơi</p>
+  </div>` ;
 const numberPattern = /^\d{10}$/;
 
 
@@ -37,8 +33,6 @@ const numberPattern = /^\d{10}$/;
 let checkname = 0; 
 let checkphone = 0 ;
 let checklocation = 0;
-let checkdate = 0 ;
-let checktime = 0 ;
 
 check.addEventListener('click',() => {
   let nameValue = name_input.value ; 
@@ -89,36 +83,19 @@ let  locationValue = locations.value ;
    }
  } 
 
-
- let  dateValue = date_input.value ; 
-   if(dateValue===""){
-     if(checkdate === 0)  {
-    div_extend_date.innerHTML = html1 ; 
-   checkdate = 1 ;
-     }
- }
- else {
-   if(checkdate === 1) {
-    div_extend_date.innerHTML = `` ; 
-    checkdate = 0 ; 
-   }
+ let roomValue = document.querySelector('.active') ;
+ if(!roomValue) {
+    div_extend_room.innerHTML = html_room ; 
  } 
+ else div_extend_room.innerHTML = `` ;
 
- let  timeValue = time_input.value ; 
-   if(timeValue===""){
-     if(checktime === 0)  {
-    div_extend_time.innerHTML = html1 ; 
-   checktime = 1 ;
-     }
+ let timeValue = document.querySelector('.active_button') ;
+ if(!timeValue) {
+    div_extend_time.innerHTML = html_time ; 
  }
- else {
-   if(checktime === 1) {
-    div_extend_time.innerHTML = `` ; 
-    checktime = 0 ; 
-   }
- } 
+ else div_extend_time.innerHTML = `` ;
 
- if(checkname != 0 || checkphone != 0  || checklocation != 0 || checkdate != 0 || checktime != 0) 
+ if(checkname != 0 || checkphone != 0  || checklocation != 0) 
    div_extend_check.innerHTML = html3 ;
   else {
     div_extend_check.innerHTML = `<div class="done">
@@ -134,11 +111,53 @@ let  locationValue = locations.value ;
   console.log(checkname) ;
   console.log(checkphone) ;
   console.log(checklocation) ;
-  console.log(checkdate) ;
-  console.log(checktime) ;
+
 
 })
 
 popup_button.addEventListener('click',() => {
   popup.classList.toggle('popup-disappear') ;
 })
+
+
+
+let theCards = document.querySelectorAll('.card') ;
+theCards.forEach(function(card)  {
+
+  
+    let no_selected = card.querySelector('.fa-circle') ;
+    let selected = card.querySelector('.fa-circle-check') ;
+
+    card.addEventListener('click',() => {
+      //  if(no_selected.classList.contains('hidden')) {
+      //     no_selected.classList.remove('hidden') ;
+      //     selected.classList.add('hidden') ;
+          
+      //  }
+      //  else {
+      //     no_selected.classList.add('hidden') ;
+      //     selected.classList.remove('hidden') ;
+         
+      //  }
+
+  
+       if(!card.classList.contains('active')) {
+        let card_active = document.querySelector('.active') ;
+        if(card_active) {
+         card_active.classList.remove('active') ;
+         card_active.querySelector('.fa-circle').classList.remove('hidden') ;
+         card_active.querySelector('.fa-circle-check').classList.add('hidden') ; 
+        }
+        card.classList.add('active') ;
+        no_selected.classList.add('hidden') ;
+        selected.classList.remove('hidden') ; 
+      }
+      else {card.classList.remove('active') ; 
+      no_selected.classList.remove('hidden') ;
+      selected.classList.add('hidden') ;
+    }
+    })
+   
+})
+
+document.querySelector('#myselect').value = '';
