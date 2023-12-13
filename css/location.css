@@ -125,7 +125,7 @@ min-height: 100vh;
 .header-nav a:hover::before {
   width:100%;
 }
-  
+/* ===============home ================*/
   .section1{
     padding: 110px 20px;  
     background-size:cover ;
