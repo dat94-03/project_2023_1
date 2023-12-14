@@ -1,17 +1,27 @@
-import { provinces } from "../data/data_province.js";
 import { locations } from "../data/data_location.js";
 let location_name = '' ;
 
 let container = document.querySelector('.loc-container') ;
 let changePages = document.querySelectorAll('.appear') ;
-let theProvince = document.querySelector('.hanoi') ;  
 
 
 
+const provinces = [{
+  id: 'hanoi' 
+},{
+  id:'hcm' 
+},{
+  id: 'ninhbinh'
+},
+{
+  id: 'nghean'
+},
+{
+  id:'nhatrang'
+}] ; 
 
 provinces.forEach((province) => {
-  //  theProvince = document.querySelector(`.hanoi`) ; 
-  console.log(`.${province.id}`) ;
+  let theProvince = document.querySelector(`.${province.id}`) ;  
   theProvince.addEventListener('click',() => {
     let containerHTML = '' ;
     let select = document.querySelector('.active') ;
@@ -46,14 +56,16 @@ provinces.forEach((province) => {
     container.innerHTML = containerHTML ;
     let changePages = document.querySelectorAll('.appear') ;
     changePages.forEach(function(changePage) {
+      let url = "" ;
       let locationName = changePage.dataset.locationName;
       changePage.addEventListener('click',() => {
         locations.forEach((location) => {
           if(location.name === locationName) {
              location_name = location.name ; 
+              url = `order.html?name=${encodeURIComponent(location_name)}` ; 
           }
         })
-       window.location.href = 'order.html' ;
+        window.location.href = url; ;
       })
    })
   })

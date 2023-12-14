@@ -14,6 +14,20 @@
 html {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  width: 4px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: var(--primary-orange);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
 ul {
   list-style: none;
 }
@@ -259,6 +273,32 @@ min-height: 100vh;
   align-items: center;
   gap: 20px;
   justify-content: center;
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  display: none;
+}
+.open-price {
+  display: inline-flex;
+}
+
+
+.price-output {
+  width: 85px;
+  margin-left: 10px;
+  padding-top: 8px;
+  padding-left: 2px;
+  padding-bottom:8px ;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.5px solid #FFBA00;
+  color: var(--primary-orange)  ;
 }
 .name-input{
   margin-left: 20px;
@@ -582,11 +622,16 @@ min-height: 100vh;
 
 .time-label{
   transform: translateY(10px);
+  display: none;
 }
 
 .wrap-time {
   margin: 0 auto;
   transform: translateY(-30px);
+  display: none;
+}
+.open-time{
+  display: block;
 }
 ul.tabs {
   width: 400px;
