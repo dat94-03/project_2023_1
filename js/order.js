@@ -254,7 +254,7 @@ theCards.forEach(function(card)  {
 })
 
 
-// Chuyển dữ liệu từ trang này sang trang khác 
+// Chuyển dữ liệu về địa điểm từ trang này sang trang khác 
 document.addEventListener('DOMContentLoaded', function () {
   const params = new URLSearchParams(window.location.search);
   const name = params.get('name');
@@ -268,6 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 document.querySelector('#myselect').value = '';
 
+// Tính giá tiền 
 function totalPrice(count) {
   let card = document.querySelector('.active') ;
   if(card.classList.contains('first-price')) {
@@ -288,3 +289,97 @@ function totalPrice(count) {
   console.log(total_price) ; 
 }
 
+// Profile
+let user_picture = document.querySelector('.user-pic') ;
+      let menu = document.querySelector('.sub-menu-wrap') ;
+      user_picture.addEventListener('click',() => {
+         menu.classList.toggle('open-menu') ;
+      })
+let user_information = document.querySelector('.user-information') ;
+let user_order = document.querySelector('.user-order') ;
+let user_logout = document.querySelector('.user-logout') ;
+
+user_order.addEventListener('click', () => {
+   window.location.href="order_details.html"  ; 
+})
+
+user_information.addEventListener('click', () => {
+  window.location.href="user_information.html"  ; 
+})
+
+user_logout.addEventListener('click', () => {
+  window.location.href="index.html"  ; 
+})
+
+// Xử lý chuỗi ngày đặt bàn
+let countHour = '' ; 
+check.addEventListener('click',() => {
+  timeButtons.forEach(button => { 
+    if(button.classList.contains('active_button')) {
+      // console.log('1') ;
+      countHour += '1' ;
+    }
+    else {
+
+    // console.log('0') ;  
+    countHour+= '0' ;
+    }
+  })
+  console.log(countHour) ; 
+  let time_string = '' ; 
+  let i ;
+  let part1 = countHour.slice(0,15) ;
+  let part2 = countHour.slice(15,30) ;
+  let part3 = countHour.slice(30,45) ;
+
+  for(i=0;i<15;i++)  {
+  if(part1[i] === '1') {
+    time_string += `Ngày ${currentDay}/${currentMonth}: ` ;
+    break ;
+   }
+  }
+  for(i=0;i<15;i++) {
+    if(part1[i] === '1') {
+      time_string +=`${i+8}h-${i+9}h,` 
+    }
+  }
+ time_string = endOfString(time_string) ; 
+
+ for(i=0;i<15;i++)  {
+  if(part2[i] === '1') {
+    time_string += `Ngày ${tomorrowDay}/${tomorrowMonth}: ` ;
+    break ;
+   }
+  }
+  for(i=0;i<15;i++) {
+    if(part2[i] === '1') {
+      time_string +=`${i+8}h-${i+9}h,` 
+    }
+  }
+ time_string = endOfString(time_string) ; 
+
+  for(i=0;i<15;i++)  {
+    if(part3[i] === '1') {
+      time_string += `Ngày ${dayAfterTomorrowDay}/${dayAfterTomorrowMonth}: ` ;
+      break ;
+     }
+    }
+    for(i=0;i<15;i++) {
+      if(part3[i] === '1') {
+        time_string +=`${i+8}h-${i+9}h,` 
+      }
+    }
+   time_string =  endOfString(time_string) ;  
+    console.log(time_string) ;
+})
+
+function endOfString(time_string) {
+  if(time_string[time_string.length-1] === ',') {
+  let stringArray = time_string.split('');
+  stringArray[stringArray.length-1] = '.';
+  time_string = stringArray.join('') ; 
+  time_string += '\n' ; 
+  return time_string ;
+  }
+  else return time_string ; 
+}
