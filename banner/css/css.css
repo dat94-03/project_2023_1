@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+body {
+    margin : 72px 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgb(17, 16, 16);
+    word-wrap: break-word;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin-top: var(--mb-1);
+}
+
+.swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    background-color: #FFBA00;
+    opacity: 1;
+    transition: .4s;
+
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 .5rem;
+} 
+
+.swiper-pagination-bullet-active{
+    width: 10px;
+    height: 10px;
+    border-radius: .5rem;
+    background-color: rgb(0, 0, 0);
+}
+/* ==================== header ============ */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #141414;
+    height: 72px;
+    padding-top: 12px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 24px 0 24px;
+}
+.header .header-logo a { 
+    font-family: 'Agbalumo';
+    font-size: 32px;
+    color: #FFBA00;
+    font-weight: 600;
+}
+.header .header-logo a span {
+    color: red;
+}
+.header .header-logo a .span3 {
+    color: rgb(0, 90, 168);
+}
+.header .header-logo a .span2 {
+    color: rgb(0, 168, 90);
+}
+.header .header-logo a .span1 {
+    color: rgb(255, 255, 255);
+}
+.header .header-nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.header-contact {
+    font-weight: 500;
+    color: #FFBA00;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+.header-contact a i {
+    color: #FFBA00;
+    font-size: 24px;
+}
+.header-nav ul li a:hover {
+    color: #FFBA00;
+}
+.header-nav a {
+    background-image: linear-gradient(
+    to right,
+    #FFBA00,
+    #FFBA00 50%,
+    #ffffff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header-nav  a:before {
+    content: '';
+    background: #FFBA00;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.header-nav a:hover {
+    background-position: 0;
+}
+
+.header-nav a:hover::before {
+    width:100%;
+}
+
+/* ============= home =======================  */
+
+.home-img {
+    background-image: url("https://noithatkendesign.vn/storage/app/media/uploaded-files/thiet-ke-quan-bi-da-6.jpg");
+    height: 680px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content-desc {
+    margin-top: -240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home-img .home-content h1{
+    font-size: 4em;
+    font-weight: 700;
+    color: #FFBA00;
+    letter-spacing: 5px;
+}
+
+.home-img .home-content button {
+    margin-top: 46px;
+    font-size: 20px;
+    font-weight: 400px;
+    line-height: 30px;
+    padding: 10px 60px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    cursor: pointer;
+    background-color: #FFBA00;
+    color: black;
+}
+.home-img .home-content button:hover {
+    color: #FFBA00;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: #FFBA00;
+}
+.btn {
+    width: 170px;
+    margin-top: 46px;
+    margin-left: 1px;
+    padding: 15px 0;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    background: #FFBA00;
+    position: relative;
+}
+
+.btn p {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.BorderTopBottom:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    top: -6px;
+    left: -7px;
+    background: #fff;
+    transition: all 0.5s ease;
+}
+
+.BorderTopBottom:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    bottom: -6px;
+    right: -7px;
+    background: #fff;
+    transition: all 0.5s ease;
+}
+
+.BorderLeftRight:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -7px;
+    width: 3px;
+    height: 25px;
+    background: #fff;
+    transition: all 0.5s ease;
+}
+
+.BorderLeftRight:after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    right: -7px;
+    width: 3px;
+    height: 25px;
+    background: #fff;
+    transition: all 0.5s ease;
+}
+
+
+.btn:hover .BorderTopBottom:before,
+.btn:hover .BorderTopBottom:after {
+    width: 184px;
+    transition: all 0.5s ease;
+}
+
+.btn:hover .BorderLeftRight:before,
+.btn:hover .BorderLeftRight:after {
+    height: 57px;
+    transition: all 0.5s ease;
+}
+
+
+/* =========== ABOUT =============== */
+
+.about {
+    background-image: url('https://warningzone.com/wp-content/uploads/2022/03/warningzone-3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 860px;
+    text-align: center;
+    padding: 100px 0 200px;
+}
+.about-content-logo {
+    background: url("https://warningzone.com/wp-content/plugins/warningzone/assets/images/heading-bg.jpg") repeat-x;
+    display: inline-block;
+    position: relative;
+    padding: 18px 20px;
+    background-size: auto;
+    min-width: 250px;
+}
+.about-content-logo h3 {
+    font-size: 20px;
+    color: #212020;
+    font-weight: 600;
+}
+.about-content-logo .dot-before {
+    position: absolute;
+    content: '';
+    background: #000000;
+    width: 7px;
+    height: 7px;
+    top: calc(50% - 3px);
+    left: 8px;
+    border-radius: 50%;
+}
+.about-content-logo .dot-after {
+    position: absolute;
+    content: '';
+    background: #000000;
+    width: 7px;
+    height: 7px;
+    top: calc(50% - 3px);
+    right: 8px;
+    border-radius: 50%;
+}
+.about-content-text {
+    margin-top: 40px;
+    display: flex;
+    flex: 50%;
+    gap: 40px;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.about-content-text .left-title, .right-title {
+    margin-bottom: 20px;
+}
+.about-content-text p {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.about-content-text .left {
+    max-width: 540px;
+}
+.about-content-text .right p span {
+    font-weight: bold;
+}
+
+/* ========== place =============== */
+.place {
+    background: url("https://warningzone.com/wp-content/uploads/2020/10/map-wnz-website@300x-2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 760px;
+    text-align: center;
+    padding: 100px 0 200px;
+}
+.place-container-logo {
+    background: url("https://warningzone.com/wp-content/plugins/warningzone/assets/images/heading-bg.jpg") repeat-x;
+    display: inline-block;
+    position: relative;
+    padding: 18px 20px;
+    background-size: auto;
+    min-width: 250px;
+    cursor: pointer;
+}
+.place-container-logo h3 {
+    font-size: 20px;
+    color: #212020;
+    font-weight: 600;
+}
+.place-container-logo .dot-before {
+    position: absolute;
+    content: '';
+    background: #000000;
+    width: 7px;
+    height: 7px;
+    top: calc(50% - 3px);
+    left: 8px;
+    border-radius: 50%;
+}
+.place-container-logo .dot-after {
+    position: absolute;
+    content: '';
+    background: #000000;
+    width: 7px;
+    height: 7px;
+    top: calc(50% - 3px);
+    right: 8px;
+    border-radius: 50%;
+}
+
+.place-container-content {
+    margin-top: 40px;
+    display: flex;
+    flex: 20%;
+    gap: 40px;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.place-container-content ul {
+    color: #FFBA00;
+    list-style-type: disc;
+}
+.place-container-content h3 {
+    color: #FFBA00;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.place-container-content ul li {
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.place-more {
+    background: url("https://warningzone.com/wp-content/themes/oceanwp-child-theme-master/assets/images/ic-btn-explore.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+.place-more a {
+    color: #FFBA00;
+    font-size: 12px;
+    text-align: left;
+    padding-right: 44px;
+}
+
+
+/* ============= login ============ */
+.wrapper {
+    position: relative;
+    width: 560px;
+    height: 560px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #FFBA00;
+    font-size: 40px;
+}
+.wrapper .form-box {
+    color: #FFBA00;
+    width: 440px;
+}
+
+
+.wrapper .form-box h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #ffffff;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFBA00;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    font-size: 20px;
+}
+.remember-forgot {
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color:#FFBA00 ;
+    margin-right: 5px;
+}
+.form-box a {
+    color: #FFBA00;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+}
+.login-register {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.login-register .register-link {
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.login-register .register-link:hover {
+    text-decoration: underline;
+}
+
+.register .login-btn {
+    margin-top: 20px;
+}
+.wrapper .register2 {
+    display: none;
+}
+.active {
+    display: none;
+}
+.wrapper .icon-close {
+    cursor: pointer;
+} 
+
+/* =============== new feeds ========== */
+
+.what-here {
+    background: url("https://warningzone.com/wp-content/plugins/warningzone/assets/images/heading-bg.jpg") repeat-x;
+    display: inline-block;
+    position: relative;
+    padding: 18px 20px;
+    background-size: auto;
+    min-width: 250px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.what-here h3 {
+    font-size: 20px;
+    color: #212020;
+    font-weight: 600;
+}
+
+.what-here .dot-before {
+    position: absolute;
+    content: '';
+    background: #000000;
+    width: 7px;
+    height: 7px;
+    top: calc(50% - 3px);
+    left: 8px;
+    border-radius: 50%;
+}
+
+.what-here .dot-after {
+    position: absolute;
+    content: '';
+    background: #000000;
+    width: 7px;
+    height: 7px;
+    top: calc(50% - 3px);
+    right: 8px;
+    border-radius: 50%;
+}
+.new-feeds{
+    padding: 140px 140px 100px;
+    background-color: #000000;
+}
+
+.new-feeds-container .new-img {
+    width: 360px;
+    margin-bottom: 16px;
+}
+
+.new-feeds-sss {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+}
+.new-feeds-sss .new-feeds-date {
+    color: #FFBA00;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.new-feeds-content h3 {
+    color: #FFBA00;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+.swiper-navBtn {
+    color: #FFBA00;
+    font-weight: 700;
+    transition: color .3s ease;
+}
+.swiper-navBtn:hover {
+    color: #FFBA00;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    color: #FFBA00;
+    font-size: 100px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+.swiper-button-prev {
+    left: 0;
+}
+
+
