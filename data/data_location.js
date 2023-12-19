@@ -1,7 +1,7 @@
 export let locations = [{
   id: 'hanoi' ,
   name: '1 Ngõ 72 Trần Đại Nghĩa',
-  img: "../địa điểm/địa điểm/1.png"
+  img: "../địa điểm/địa điểm/1.png",
 }, 
 {
   id: 'hanoi' ,

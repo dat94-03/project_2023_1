@@ -1,4 +1,3 @@
-
 import { locations } from "../data/data_location.js";
 let location_name = '' ;
 
@@ -8,7 +7,7 @@ let changePages = document.querySelectorAll('.appear') ;
 
 
 const provinces = [{
-  id: 'hanoi' ,
+  id: 'hanoi' 
 },{
   id:'hcm' 
 },{
@@ -22,8 +21,7 @@ const provinces = [{
 }] ; 
 
 provinces.forEach((province) => {
-  let theProvince = document.querySelector(`.${province.id}`) ; 
-
+  let theProvince = document.querySelector(`.${province.id}`) ;  
   theProvince.addEventListener('click',() => {
     let containerHTML = '' ;
     let select = document.querySelector('.active') ;
@@ -58,27 +56,29 @@ provinces.forEach((province) => {
     container.innerHTML = containerHTML ;
     let changePages = document.querySelectorAll('.appear') ;
     changePages.forEach(function(changePage) {
+      let url = "" ;
       let locationName = changePage.dataset.locationName;
       changePage.addEventListener('click',() => {
         locations.forEach((location) => {
           if(location.name === locationName) {
              location_name = location.name ; 
+              url = `order.html?name=${encodeURIComponent(location_name)}` ; 
           }
         })
-       window.location.href = 'order.html' ;
+        window.location.href = url; ;
       })
    })
   })
 })
 
 changePages.forEach(function(changePage) {
-  let locationName = changePage.dataset.locationName ;
+  let locationName = changePage.dataset.locationName;
   changePage.addEventListener('click',() => {
-   locations.forEach((location) => {
-     if(location.name === locationName) {
-       location_name = locationName ; 
-     }
-   })
-    window.location.href = 'order.html' ;
+    locations.forEach((location) => {
+      if(location.name === locationName) {
+         location_name = location.name ; 
+      }
+    })
+   window.location.href = 'order.html' ;
   })
-}) ;
+})
