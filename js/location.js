@@ -1,34 +1,34 @@
 import { locations } from "../data/data_location.js";
-let location_name = '' ;
+let location_name = '';
 
-let container = document.querySelector('.loc-container') ;
-let changePages = document.querySelectorAll('.appear') ;
+let container = document.querySelector('.loc-container');
+let changePages = document.querySelectorAll('.appear');
 
 
 
 const provinces = [{
-  id: 'hanoi' 
-},{
-  id:'hcm' 
-},{
+  id: 'hanoi'
+}, {
+  id: 'hcm'
+}, {
   id: 'ninhbinh'
 },
 {
   id: 'nghean'
 },
 {
-  id:'nhatrang'
-}] ; 
+  id: 'nhatrang'
+}];
 
 provinces.forEach((province) => {
-  let theProvince = document.querySelector(`.${province.id}`) ;  
-  theProvince.addEventListener('click',() => {
-    let containerHTML = '' ;
-    let select = document.querySelector('.active') ;
-    select.classList.remove('active') ;
-    theProvince.classList.add('active') ;
+  let theProvince = document.querySelector(`.${province.id}`);
+  theProvince.addEventListener('click', () => {
+    let containerHTML = '';
+    let select = document.querySelector('.active');
+    select.classList.remove('active');
+    theProvince.classList.add('active');
     locations.forEach((location) => {
-      if(location.id === province.id)  {
+      if (location.id === province.id) {
         containerHTML += `<div class="loc">
         <div class="div-img">
         <img src="${location.img}">
@@ -48,37 +48,52 @@ provinces.forEach((province) => {
             <span>7:00 - 23:00</span>
           </div>
         </div>
-        </div>`; 
+        </div>`;
       }
-    
+
     })
-    
-    container.innerHTML = containerHTML ;
-    let changePages = document.querySelectorAll('.appear') ;
-    changePages.forEach(function(changePage) {
-      let url = "" ;
+
+    container.innerHTML = containerHTML;
+    let changePages = document.querySelectorAll('.appear');
+    changePages.forEach(function (changePage) {
+      let url = "";
       let locationName = changePage.dataset.locationName;
-      changePage.addEventListener('click',() => {
+      changePage.addEventListener('click', () => {
         locations.forEach((location) => {
-          if(location.name === locationName) {
-             location_name = location.name ; 
-              url = `order.html?name=${encodeURIComponent(location_name)}` ; 
+          if (location.name === locationName) {
+            location_name = location.name;
+            url = `order.html?name=${encodeURIComponent(location_name)}`;
           }
         })
-        window.location.href = url; ;
+        window.location.href = url;;
       })
-   })
+    })
   })
 })
 
-changePages.forEach(function(changePage) {
+changePages.forEach(function (changePage) {
   let locationName = changePage.dataset.locationName;
-  changePage.addEventListener('click',() => {
+  changePage.addEventListener('click', () => {
     locations.forEach((location) => {
-      if(location.name === locationName) {
-         location_name = location.name ; 
+      if (location.name === locationName) {
+        location_name = location.name;
       }
     })
-   window.location.href = 'order.html' ;
+    window.location.href = 'order.html';
+  })
+})
+
+
+changePages.forEach(function (changePage) {
+  let url = "";
+  let locationName = changePage.dataset.locationName;
+  changePage.addEventListener('click', () => {
+    locations.forEach((location) => {
+      if (location.name === locationName) {
+        location_name = location.name;
+        url = `order.html?name=${encodeURIComponent(location_name)}`;
+      }
+    })
+    window.location.href = url;;
   })
 })
